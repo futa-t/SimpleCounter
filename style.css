@@ -8,6 +8,12 @@ body {
     user-select: none;
     overflow: hidden;
     text-align: center;
+    touch-action: manipulation;
+}
+
+div {
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 #counter {
