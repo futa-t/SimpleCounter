@@ -67,16 +67,17 @@ function loadState() {
         document.getElementById('longPressDuration').value = longPressDuration / 1000;
     }
 }
-
-
+let isResetting = false;
 // リセット
 function reset() {
     if (confirm("リセットしますか？")) {
+        isResetting = true; // リセット中フラグを立てる
         count = 0;
         counter.innerText = count;
         setBackgroundColor(null);
         saveState();
         settingMenu.style.display = 'none';
+        setTimeout(() => isResetting = false, 100); // リセット後100ms待ってフラグを解除
     }
 }
 
@@ -106,6 +107,7 @@ document.getElementById('settingsButton').addEventListener('click', (event)=> {
 
 // カウントアップ処理。メニューが開かれている場合はカウントアップせずに閉じる
 counter.addEventListener('click', (event)=> {
+    if (isResetting) return;
     if (settingMenu.style.display === 'block' && !event.target.closest('#settingsMenu') && !event.target.closest('#settingsButton')) {
         settingMenu.style.display = 'none';
     } else {

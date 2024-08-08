@@ -1,9 +1,4 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
     font-family: 'Lato', sans-serif;
     user-select: none;
     overflow: hidden;
@@ -24,7 +19,7 @@ div {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     font-size: calc(10vw + 10vh);
     white-space: nowrap;
     transition: background-color 0.5s linear;
