@@ -2,7 +2,7 @@
 /node_modules
 
 # ビルド出力
-# /dist
+/dist
 
 # TypeScriptのビルドキャッシュ
 *.tsbuildinfo

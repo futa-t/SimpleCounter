@@ -2,6 +2,7 @@
   "name": "simplecounter",
   "version": "1.0.0",
   "main": "effects.js",
+  "homepage": "https://futa-t.github.io/SimpleCounter/",
   "scripts": {
     "build:ts": "tsc",
     "watch:ts": "tsc -w",
