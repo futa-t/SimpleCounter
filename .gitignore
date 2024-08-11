@@ -1,0 +1,47 @@
+# 依存関係
+/node_modules
+
+# ビルド出力
+# /dist
+
+# TypeScriptのビルドキャッシュ
+*.tsbuildinfo
+
+# ログファイル
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# エディタ固有のファイル
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS固有のファイル
+.DS_Store
+Thumbs.db
+
+# 環境変数ファイル
+.env
+.env.local
+.env.*.local
+
+# SCSSのソースマップ
+*.css.map
+
+# テストカバレッジレポート
+/coverage
+
+# 一時ファイル
+*.tmp
+*.temp
+
+# バックアップファイル
+*.bak
+
+# その他不要なファイル
+*.log
+*.lock
+!package-lock.json
+!yarn.lock
