@@ -1,4 +1,4 @@
-// import { runParticleEffect, runConfettiEffect } from './effects.js';
+import { runParticleEffect, runConfettiEffect } from './effects.js';
 
 // 要素取得
 const counter = document.getElementById('counter');
@@ -36,17 +36,20 @@ function increment() {
         return;
     }
 
+    if (ctx === null) {
+        return;
+    }
 
     //最上位の桁の数字が変わった場合にパーティクルを作成
-    // if (getTopDigit(count) !== getTopDigit(prevCount) && count >= 10) {
-    //     runParticleEffect(ctx);
-    // }
+    if (getTopDigit(count) !== getTopDigit(prevCount) && count >= 10) {
+        runParticleEffect(ctx);
+    }
 
 
-    // // 桁が増えた場合に紙吹雪を作成
-    // if (count.toString().length > prevCount.toString().length) {
-    //     runConfettiEffect(ctx);
-    // }
+    // 桁が増えた場合に紙吹雪を作成
+    if (count.toString().length > prevCount.toString().length) {
+        runConfettiEffect(ctx);
+    }
 }
 
 function getTopDigit(num: number): number {
